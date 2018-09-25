@@ -37,7 +37,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Column="0"  HorizontalAlignment="Left" FontFamily="Segoe UI Light" FontSize="20" FontWeight="Bold">Área de figuras geométricas</TextBlock>
+        <TextBlock Grid.Column="0"  HorizontalAlignment="Left" FontFamily="Segoe UI Light" FontSize="20" FontWeight="Bold">Área de Figuras Geométricas</TextBlock>
 
         <TextBlock Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Left" FontFamily="Segoe UI Semibold" FontWeight="Bold" Height="19" VerticalAlignment="Bottom" >Rectángulo</TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Left" FontFamily="Segoe UI Symbol" Foreground="#FF2D4D6E" >Base</TextBlock>
