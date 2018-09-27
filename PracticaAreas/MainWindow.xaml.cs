@@ -20,17 +20,20 @@ namespace PracticaAreas
     /// </summary>
     public partial class MainWindow : Window
     {
+        /*
         float dato1 = 0;
         float dato2 = 0;
         float dato3 = 0;
         float resultado = 0;
+        */
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        
         private void RectanguloClick(object sender, RoutedEventArgs e)
         {
+            /*
             dato1 = float.Parse(RectanguloBase.Text);
             dato2 = float.Parse(RectanguloAltura.Text);
 
@@ -41,8 +44,9 @@ namespace PracticaAreas
             dato1 = 0;
             dato2 = 0;
             resultado = 0;
+            */
         }
-
+        /*
         private void TrianguloClick(object sender, RoutedEventArgs e)
         {
             dato1 = float.Parse(TrianguloBase.Text);
@@ -83,6 +87,28 @@ namespace PracticaAreas
             dato2 = 0;
             dato3 = 0;
             resultado = 0;
+        }
+        */
+        private void cbTipoFigura_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            panelConfiguracion.Children.Clear();
+
+            switch (cbTipoFigura.SelectedIndex)
+            {
+                case 0:
+                    panelConfiguracion.Children.Add(new ControlAreaRectangulo());
+                    break;
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+            }
+                
         }
     }
 }
