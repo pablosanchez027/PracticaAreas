@@ -20,75 +20,17 @@ namespace PracticaAreas
     /// </summary>
     public partial class MainWindow : Window
     {
-        /*
+        
         float dato1 = 0;
         float dato2 = 0;
         float dato3 = 0;
         float resultado = 0;
-        */
+        
         public MainWindow()
         {
             InitializeComponent();
         }
-        
-        private void RectanguloClick(object sender, RoutedEventArgs e)
-        {
-            /*
-            dato1 = float.Parse(RectanguloBase.Text);
-            dato2 = float.Parse(RectanguloAltura.Text);
 
-           resultado = dato1 * dato2;
-
-            RectanguloArea.Text = resultado.ToString();
-
-            dato1 = 0;
-            dato2 = 0;
-            resultado = 0;
-            */
-        }
-        /*
-        private void TrianguloClick(object sender, RoutedEventArgs e)
-        {
-            dato1 = float.Parse(TrianguloBase.Text);
-            dato2 = float.Parse(TrianguloAltura.Text);
-
-            resultado = (dato1 * dato2)/2;
-
-            TrianguloArea.Text = resultado.ToString();
-
-            dato1 = 0;
-            dato2 = 0;
-            resultado = 0;
-        }
-
-        private void CirculoClick(object sender, RoutedEventArgs e)
-        {
-            dato1 = float.Parse(CirculoRadio.Text);
-
-            resultado = (dato1*dato1) * 3.14160f;
-
-            CirculoArea.Text = resultado.ToString();
-
-            dato1 = 0;
-            resultado = 0;
-        }
-
-        private void TrapecioClick(object sender, RoutedEventArgs e)
-        {
-            dato1 = float.Parse(TrapecioBaseMayor.Text);
-            dato2 = float.Parse(TrapecioBaseMenor.Text);
-            dato3 = float.Parse(TrapecioAltura.Text);
-
-            resultado = (dato3 * dato1 + dato2)/2;
-
-            TrapecioArea.Text = resultado.ToString();
-
-            dato1 = 0;
-            dato2 = 0;
-            dato3 = 0;
-            resultado = 0;
-        }
-        */
         private void cbTipoFigura_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             panelConfiguracion.Children.Clear();
@@ -99,16 +41,60 @@ namespace PracticaAreas
                     panelConfiguracion.Children.Add(new ControlAreaRectangulo());
                     break;
                 case 1:
-
+                    panelConfiguracion.Children.Add(new ControlAreaTriangulo());
                     break;
                 case 2:
-
+                    panelConfiguracion.Children.Add(new ControlAreaCirculo());
                     break;
                 case 3:
-
+                    panelConfiguracion.Children.Add(new ControlAreaTrapecio());
                     break;
             }
-                
+            AreaResultado.Text = "0.0";
         }
+        private void CalcularClick(object sender, RoutedEventArgs e)
+        {
+            switch (cbTipoFigura.SelectedIndex)
+
+            {
+                case 0: 
+                    var controlAreaRectangulo = (ControlAreaRectangulo)panelConfiguracion.Children[0];
+
+                    dato1 = float.Parse(controlAreaRectangulo.RectanguloBase.Text);
+                    dato2 = float.Parse(controlAreaRectangulo.RectanguloAltura.Text);
+
+                    resultado = dato1 * dato2;
+                    break;
+                case 1: 
+                    var controlAreaTriangulo = (ControlAreaTriangulo)panelConfiguracion.Children[0];
+                    dato1 = float.Parse(controlAreaTriangulo.TrianguloBase.Text);
+                    dato2 = float.Parse(controlAreaTriangulo.TrianguloAltura.Text);
+
+                    resultado = (dato1 * dato2) / 2;
+                    break;
+                case 2:
+                    var controlAreaCirculo = (ControlAreaCirculo)panelConfiguracion.Children[0];
+                    dato1 = float.Parse(controlAreaCirculo.CirculoRadio.Text);
+
+                    resultado = (dato1 * dato1) * 3.14160f;
+                    break;
+                case 3:
+                    var controlAreaTrapecio = (ControlAreaTrapecio)panelConfiguracion.Children[0];
+                    dato1 = float.Parse(controlAreaTrapecio.TrapecioBaseMayor.Text);
+                    dato2 = float.Parse(controlAreaTrapecio.TrapecioBaseMenor.Text);
+                    dato3 = float.Parse(controlAreaTrapecio.TrapecioAltura.Text);
+
+                    resultado = (dato3 * dato1 + dato2) / 2;
+                    break;
+            }
+
+            AreaResultado.Text = resultado.ToString();
+
+            dato1 = 0;
+            dato2 = 0;
+            dato3 = 0;
+            resultado = 0;
+        }
+
     }
 }

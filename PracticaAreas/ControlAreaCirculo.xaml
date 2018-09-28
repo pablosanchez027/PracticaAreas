@@ -17,7 +17,7 @@
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" FontFamily="Segoe UI Symbol" Foreground="#FF2D4D6E" >Radio</TextBlock>
-        <TextBox Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Left" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="138" Name="CirculoRadio"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Center" FontFamily="Segoe UI Symbol" Foreground="#FF2D4D6E" >Radio</TextBlock>
+        <TextBox Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="138" Name="CirculoRadio"></TextBox>
     </Grid>
 </UserControl>

@@ -33,11 +33,11 @@
             <ComboBoxItem>Trapecio</ComboBoxItem>
         </ComboBox>
 
-        <StackPanel Name="panelConfiguracion" Grid.Row="4" Grid.Column="1"></StackPanel>
+        <StackPanel Name="panelConfiguracion" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center"></StackPanel>
 
-        <Button Grid.Column="1" Grid.Row="5" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="100" Click="RectanguloClick" Name="RectanguloBoton">Calcular</Button>
+        <Button Grid.Column="1" Grid.Row="5" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="100" Click="CalcularClick" Name="CalcularBoton">Calcular</Button>
         <TextBlock Grid.Column="1" Grid.Row="6"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Symbol" Foreground="#FF2D4D6E">Área</TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="7"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="138" IsEnabled="False" TextAlignment="Center" Name="RectanguloArea" Height="25">0 0</TextBox>
+        <TextBox Grid.Column="1" Grid.Row="7"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Historic" Foreground="#FF2D4D6E" Width="138" IsEnabled="False" TextAlignment="Center" Name="AreaResultado" Height="25">0 0</TextBox>
 
     </Grid>
 </Window>
