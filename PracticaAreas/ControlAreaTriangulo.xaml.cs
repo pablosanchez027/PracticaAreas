@@ -23,6 +23,7 @@ namespace PracticaAreas
         public ControlAreaTriangulo()
         {
             InitializeComponent();
+            TrianguloBase.Focus();
         }
     }
 }

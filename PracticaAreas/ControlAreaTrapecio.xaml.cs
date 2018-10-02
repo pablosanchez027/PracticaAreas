@@ -23,6 +23,7 @@ namespace PracticaAreas
         public ControlAreaTrapecio()
         {
             InitializeComponent();
+            TrapecioBaseMayor.Focus();
         }
     }
 }

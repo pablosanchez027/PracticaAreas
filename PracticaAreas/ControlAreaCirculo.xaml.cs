@@ -23,6 +23,7 @@ namespace PracticaAreas
         public ControlAreaCirculo()
         {
             InitializeComponent();
+            CirculoRadio.Focus();
         }
     }
 }
